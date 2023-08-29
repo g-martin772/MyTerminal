@@ -10,6 +10,7 @@ Set-Alias tt tree
 Set-Alias ll ls
 Set-Alias vim nvmim
 Set-Alias vi nvmim
+Set-Alias v nvmim
 Set-Alias k kubectl
 
 $localPsConfPath = "$env:USERPROFILE\Documents\PowerShell"
