@@ -5,12 +5,17 @@ winget install Neovim.Neovim
 winget install Git.Git
 winget install OpenJS.NodeJS
 winget install JanDeDobbeleer.OhMyPosh
+winget install Python.Python.3.8
+
+pip install jedi==0.16.0
 
 Install-Module Terminal-Icons -Repository PSGallery -Force
 Install-Module z
 Install-Module PSReadLine -AllowPrerelease -Force - SkipPublisherCheck
 
 choco install nvm
+
+npm install -g yarn
 
 Write-Host "Installing Fonts"
 $fontFolderPath = "../JetBrainsMono"
@@ -52,3 +57,13 @@ $localPsConfPath = "$env:USERPROFILE\Documents\PowerShell"
 if (-not (Test-Path -Path $localPsConfPath)) { mkdir $localPsConfPath }
 Copy-Item -Path $newPsConfPath -Destination $localPsConfPath -Force
 Copy-Item -Path $newPoshConfPath -Destination $localPsConfPath -Force
+
+$ctagsPath = "../exuberant-ctags"
+$env:Path="$($env:Path);$ctagsPath"
+$ctagsVersion = ctags --version
+if ($ctagsVersion) {
+    Write-Host "Exuberant Ctags version $ctagsVersion is installed."
+} else {
+    Write-Host "Exuberant Ctags installation failed."
+}
+

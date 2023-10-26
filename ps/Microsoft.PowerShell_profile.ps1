@@ -8,9 +8,9 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 Set-Alias tt tree
 Set-Alias ll ls
-Set-Alias vim nvmim
-Set-Alias vi nvmim
-Set-Alias v nvmim
+Set-Alias vim nvim
+Set-Alias vi nvim
+Set-Alias v nvim
 Set-Alias k kubectl
 
 $localPsConfPath = "$env:USERPROFILE\Documents\PowerShell"
