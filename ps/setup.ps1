@@ -6,6 +6,13 @@ winget install Git.Git
 winget install OpenJS.NodeJS
 winget install JanDeDobbeleer.OhMyPosh
 winget install Python.Python.3.8
+winget install GitHub.GitHubDesktop
+winget install GnuWin32.Make
+winget install JetBrains.Toolbox
+winget install  WinSCP.WinSCP
+winget install WireGuard.WireGuard
+winget install XP89DCGQ3K6VLD # Powertoys
+winget install VMware.WorkstationPlayer
 
 pip install jedi==0.16.0
 
